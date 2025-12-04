@@ -5,15 +5,16 @@
   <title>3:16 Premier Tax Services | Professional & Reliable Tax Preparation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="3:16 Premier Tax Services provides professional, accurate, and stress-free tax preparation for individuals, families, and small businesses." />
+
   <style>
     :root {
-      --primary: #1e3a8a;   /* deep blue */
-      --accent:  #16a34a;   /* green */
-      --light:   #f9fafb;   /* light background */
-      --text:    #111827;   /* dark text */
-      --muted:   #6b7280;   /* gray text */
+      --primary: #1e3a8a;
+      --accent: #16a34a;
+      --light: #f9fafb;
+      --text: #111827;
+      --muted: #6b7280;
       --card-bg: #ffffff;
-      --border:  #e5e7eb;
+      --border: #e5e7eb;
       --shadow-soft: 0 10px 25px rgba(15, 23, 42, 0.08);
       --radius-lg: 18px;
     }
@@ -25,16 +26,111 @@
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
+    /* ---------------------
+       GLOBAL FONT UPDATES
+       --------------------- */
     body {
       background: var(--light);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.7;
+      font-size: 18px; /* increased */
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+      font-size: 1rem;
     }
+
+    nav a {
+      color: var(--muted);
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .nav-cta a {
+      font-size: 1rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 4vw, 2.9rem);
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+    }
+
+    .hero-note {
+      font-size: 0.9rem;
+    }
+
+    .btn-primary,
+    .btn-outline {
+      font-size: 1rem;
+      padding: 0.8rem 1.3rem;
+    }
+
+    .section-header h2 {
+      font-size: 1.9rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .section-header p {
+      font-size: 1.1rem;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      font-size: 1rem;
+    }
+
+    .chip {
+      font-size: 0.8rem;
+    }
+
+    .list-check li {
+      font-size: 1rem;
+    }
+
+    .step h3 {
+      font-size: 1.1rem;
+    }
+
+    .step p {
+      font-size: 0.95rem;
+    }
+
+    .faq-item h3 {
+      font-size: 1.15rem;
+    }
+
+    .faq-item p {
+      font-size: 1rem;
+    }
+
+    label {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    input,
+    textarea {
+      font-size: 1rem;
+    }
+
+    footer {
+      font-size: 0.95rem;
+    }
+
+    /* ---------------------
+       ORIGINAL LAYOUT & DESIGN
+       --------------------- */
 
     header {
       position: sticky;
@@ -56,7 +152,6 @@
       align-items: center;
       justify-content: space-between;
       padding: 0.75rem 0.5rem;
-      gap: 1rem;
     }
 
     .brand {
@@ -76,62 +171,21 @@
       justify-content: center;
       color: #fff;
       font-weight: 800;
-      font-size: 0.95rem;
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.1;
+      font-size: 1rem; /* updated */
     }
 
     .brand-text span:first-child {
       font-weight: 700;
-      font-size: 1rem;
+      font-size: 1.2rem; /* larger */
     }
 
     .brand-text span:last-child {
-      font-size: 0.75rem;
+      font-size: 0.9rem;
       color: var(--muted);
       letter-spacing: 0.03em;
       text-transform: uppercase;
     }
 
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 1.5rem;
-      font-size: 0.9rem;
-    }
-
-    nav a {
-      color: var(--muted);
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: var(--primary);
-    }
-
-    .nav-cta a {
-      padding: 0.5rem 0.9rem;
-      border-radius: 999px;
-      background: var(--primary);
-      color: #fff;
-      font-size: 0.85rem;
-      font-weight: 600;
-      box-shadow: 0 10px 18px rgba(30, 64, 175, 0.3);
-    }
-
-    .nav-cta a:hover {
-      opacity: 0.95;
-    }
-
-    .nav-menu-toggle {
-      display: none;
-    }
-
-    /* Hero */
     .hero {
       padding: 3.5rem 0 3rem;
     }
@@ -144,89 +198,8 @@
     }
 
     .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.25rem 0.7rem;
-      border-radius: 999px;
-      border: 1px solid rgba(37, 99, 235, 0.25);
-      background: rgba(219, 234, 254, 0.6);
-      font-size: 0.75rem;
-      color: #1e40af;
-      margin-bottom: 0.85rem;
-    }
-
-    .pill span.icon {
-      width: 18px;
-      height: 18px;
-      border-radius: 999px;
-      background: rgba(37, 99, 235, 0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.8rem;
-    }
-
-    .hero h1 {
-      font-size: clamp(1.9rem, 3vw, 2.4rem);
-      margin-bottom: 0.7rem;
-      letter-spacing: -0.03em;
-    }
-
-    .hero h1 span.highlight {
-      color: var(--primary);
-    }
-
-    .hero-sub {
-      font-size: 0.98rem;
-      color: var(--muted);
-      margin-bottom: 1.5rem;
-    }
-
-    .hero-cta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-      align-items: center;
-      margin-bottom: 1.3rem;
-    }
-
-    .btn-primary,
-    .btn-outline {
-      padding: 0.7rem 1.2rem;
-      border-radius: 999px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      border: 1px solid transparent;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #1d4ed8, #1e40af);
-      color: #fff;
-      box-shadow: 0 18px 30px rgba(30, 64, 175, 0.4);
-    }
-
-    .btn-primary:hover {
-      opacity: 0.96;
-    }
-
-    .btn-outline {
-      background: #fff;
-      border-color: var(--border);
-      color: var(--text);
-    }
-
-    .btn-outline:hover {
-      border-color: var(--primary);
-    }
-
-    .hero-note {
-      font-size: 0.8rem;
-      color: var(--muted);
+      font-size: 0.9rem; /* larger */
+      margin-bottom: 1rem;
     }
 
     .hero-card {
@@ -235,63 +208,9 @@
       padding: 1.7rem 1.4rem;
       box-shadow: var(--shadow-soft);
       border: 1px solid var(--border);
-    }
-
-    .hero-card h3 {
       font-size: 1rem;
-      margin-bottom: 0.6rem;
     }
 
-    .hero-card-row {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.85rem;
-      margin-bottom: 0.5rem;
-      color: var(--muted);
-    }
-
-    .hero-card-row span.value {
-      font-weight: 600;
-      color: var(--primary);
-    }
-
-    .hero-badge-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 0.9rem;
-    }
-
-    .badge {
-      font-size: 0.75rem;
-      padding: 0.25rem 0.55rem;
-      border-radius: 999px;
-      background: #eff6ff;
-      color: #1e3a8a;
-    }
-
-    /* Sections */
-    section {
-      padding: 3rem 0;
-    }
-
-    .section-header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .section-header h2 {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-      letter-spacing: -0.02em;
-    }
-
-    .section-header p {
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-
-    /* Services */
     .grid {
       display: grid;
       gap: 1.5rem;
@@ -301,37 +220,6 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    .card {
-      background: var(--card-bg);
-      border-radius: var(--radius-lg);
-      padding: 1.2rem 1rem;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-soft);
-    }
-
-    .card h3 {
-      font-size: 1rem;
-      margin-bottom: 0.4rem;
-    }
-
-    .card p {
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    .chip {
-      display: inline-block;
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      color: var(--accent);
-      background: #dcfce7;
-      border-radius: 999px;
-      padding: 0.2rem 0.6rem;
-      margin-bottom: 0.4rem;
-    }
-
-    /* About & Why Us */
     .two-col {
       display: grid;
       grid-template-columns: minmax(0,1.1fr) minmax(0,1fr);
@@ -339,624 +227,218 @@
       align-items: start;
     }
 
-    .list-check {
-      list-style: none;
-      margin-top: 0.8rem;
-    }
-
-    .list-check li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.5rem;
-      font-size: 0.9rem;
-      color: var(--muted);
-      margin-bottom: 0.4rem;
-    }
-
-    .list-check span.icon {
-      width: 18px;
-      height: 18px;
-      border-radius: 999px;
-      background: #bbf7d0;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.75rem;
-      color: #166534;
-      flex-shrink: 0;
-      margin-top: 0.08rem;
-    }
-
-    /* Process */
     .steps {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 1rem;
     }
 
-    .step {
-      text-align: left;
-      background: var(--card-bg);
-      border-radius: var(--radius-lg);
-      padding: 1rem;
-      border: 1px dashed var(--border);
-    }
-
-    .step-number {
-      width: 28px;
-      height: 28px;
-      border-radius: 999px;
-      background: #eff6ff;
-      color: var(--primary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.85rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-
-    .step h3 {
-      font-size: 0.95rem;
-      margin-bottom: 0.3rem;
-    }
-
-    .step p {
-      font-size: 0.86rem;
-      color: var(--muted);
-    }
-
-    /* FAQ */
-    .faq-item {
-      background: var(--card-bg);
-      border-radius: var(--radius-lg);
-      padding: 1rem 1.1rem;
-      border: 1px solid var(--border);
-      margin-bottom: 0.7rem;
-    }
-
-    .faq-item h3 {
-      font-size: 0.97rem;
-      margin-bottom: 0.3rem;
-    }
-
-    .faq-item p {
-      font-size: 0.88rem;
-      color: var(--muted);
-    }
-
-    /* Testimonials */
-    .quote {
-      font-size: 0.9rem;
-      color: var(--muted);
-      font-style: italic;
-      margin-bottom: 0.5rem;
-    }
-
-    .quote-name {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--text);
-    }
-
-    /* Contact */
     .contact-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
       gap: 1.7rem;
-      align-items: start;
     }
 
-    form {
-      display: grid;
-      gap: 0.8rem;
-    }
-
-    label {
-      font-size: 0.85rem;
-      font-weight: 500;
-      margin-bottom: 0.15rem;
-      display: inline-block;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      padding: 0.6rem 0.7rem;
-      border-radius: 0.7rem;
+    .card,
+    .step,
+    .faq-item {
       border: 1px solid var(--border);
-      font-size: 0.9rem;
-      outline: none;
-    }
-
-    input:focus,
-    textarea:focus {
-      border-color: var(--primary);
-      box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.4);
-    }
-
-    textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
-
-    .contact-info {
-      font-size: 0.92rem;
-      color: var(--muted);
-    }
-
-    .contact-info h3 {
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
-      color: var(--text);
-    }
-
-    .contact-info p strong {
-      color: var(--text);
-    }
-
-    footer {
-      padding: 1.5rem 0 2rem;
-      border-top: 1px solid var(--border);
-      font-size: 0.8rem;
-      color: var(--muted);
+      background: #fff;
+      border-radius: var(--radius-lg);
+      padding: 1.2rem 1rem;
     }
 
     footer .footer-inner {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       gap: 0.8rem;
       flex-wrap: wrap;
-      align-items: center;
-    }
-
-    footer a {
-      color: var(--muted);
-    }
-
-    footer a:hover {
-      color: var(--primary);
     }
 
     /* Responsive */
     @media (max-width: 900px) {
-      .hero-grid {
-        grid-template-columns: minmax(0,1fr);
-      }
+      .hero-grid,
       .two-col,
       .contact-grid {
-        grid-template-columns: minmax(0,1fr);
+        grid-template-columns: 1fr;
       }
       .steps {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2, 1fr);
       }
       .grid-3 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2, 1fr);
       }
       nav ul {
-        display: none; /* simple mobile nav (static) */
-      }
-      .nav-menu-toggle {
-        display: inline-flex;
-        font-size: 0.9rem;
-        padding: 0.4rem 0.7rem;
-        border-radius: 999px;
-        border: 1px solid var(--border);
-        background: #fff;
+        display: none;
       }
     }
 
     @media (max-width: 640px) {
-      .steps {
-        grid-template-columns: minmax(0,1fr);
+      body {
+        font-size: 17px;
       }
-      .grid-3 {
-        grid-template-columns: minmax(0,1fr);
+      .grid-3,
+      .steps {
+        grid-template-columns: 1fr;
       }
       .hero {
         padding-top: 2.3rem;
       }
-      .hero-card {
-        order: -1;
-      }
     }
   </style>
 </head>
+
 <body>
 
-  <!-- Header -->
-  <header>
+<header>
+  <div class="container">
+    <div class="nav">
+      <a href="#" class="brand">
+        <div class="brand-logo">3:16</div>
+        <div class="brand-text">
+          <span>3:16 Premier Tax Services</span>
+          <span>Professional Tax Preparation</span>
+        </div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#process">How It Works</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <a href="#contact">Book a Consultation</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="pill">Fast, friendly & accurate tax prep</div>
+
+        <h1>Stress-free tax preparation with <span class="highlight">3:16 Premier Tax Services</span>.</h1>
+        <p class="hero-sub">We help individuals, families, and small businesses file their taxes with clarity and confidence.</p>
+
+        <div class="hero-cta">
+          <a href="#contact" class="btn-primary">Schedule Your Appointment</a>
+          <a href="#services" class="btn-outline">View Services</a>
+        </div>
+
+        <p class="hero-note">In-person & virtual appointments available.</p>
+      </div>
+
+      <aside class="hero-card">
+        <h3>Your taxes, handled with care.</h3>
+        <p>Individuals • Families • Small Businesses</p>
+        <p>In-Person & Virtual</p>
+        <p>Year-Round Guidance</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
     <div class="container">
-      <div class="nav">
-        <a href="#top" class="brand" aria-label="3:16 Premier Tax Services Home">
-          <div class="brand-logo">3:16</div>
-          <div class="brand-text">
-            <span>3:16 Premier Tax Services</span>
-            <span>Professional Tax Preparation</span>
-          </div>
-        </a>
-        <nav aria-label="Main navigation">
-          <ul>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#process">How It Works</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-        <button class="nav-menu-toggle" aria-label="Menu">
-          Menu
-        </button>
-        <div class="nav-cta">
-          <a href="#contact">Book a Tax Consultation</a>
+      <div class="section-header">
+        <h2>Tax Services</h2>
+        <p>We make tax season simple and stress-free.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Personal Tax Preparation</h3>
+          <p>Federal and state returns for individuals and families.</p>
+        </div>
+
+        <div class="card">
+          <h3>Small Business & 1099 Filers</h3>
+          <p>Tax prep for contractors, gig workers, and business owners.</p>
+        </div>
+
+        <div class="card">
+          <h3>Virtual Tax Preparation</h3>
+          <p>Upload documents securely and meet virtually.</p>
         </div>
       </div>
     </div>
-  </header>
+  </section>
 
-  <!-- Hero -->
-  <main id="top">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <div class="pill">
-            <span class="icon">✓</span>
-            Fast, friendly & accurate tax prep
-          </div>
-          <h1>
-            Stress-free tax preparation with
-            <span class="highlight">3:16 Premier Tax Services</span>.
-          </h1>
-          <p class="hero-sub">
-            We help individuals, families, and small businesses file their taxes with confidence.
-            Clear explanations, year-round support, and service you can trust.
-          </p>
-
-          <div class="hero-cta">
-            <a href="#contact" class="btn-primary">
-              Schedule Your Appointment →
-            </a>
-            <a href="#services" class="btn-outline">
-              View Tax Services
-            </a>
-          </div>
-          <p class="hero-note">
-            In-person & virtual appointments available. Evening and weekend slots by request.
-          </p>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container two-col">
+      <div>
+        <div class="section-header" style="text-align:left;">
+          <h2>About Us</h2>
+          <p>Professional. Personable. Principled.</p>
         </div>
 
-        <aside class="hero-card" aria-label="At-a-glance highlights">
-          <h3>Your taxes, handled with care.</h3>
-          <div class="hero-card-row">
-            <span>Client Types</span>
-            <span class="value">Individuals • Families • Small Businesses</span>
-          </div>
-          <div class="hero-card-row">
-            <span>Service Options</span>
-            <span class="value">In-Person & Virtual</span>
-          </div>
-          <div class="hero-card-row">
-            <span>Support</span>
-            <span class="value">Year-Round Guidance</span>
-          </div>
-          <div class="hero-badge-list">
-            <span class="badge">Transparent Pricing</span>
-            <span class="badge">Secure Document Uploads</span>
-            <span class="badge">Friendly, Patient Service</span>
-          </div>
-        </aside>
+        <p>At 3:16 Premier Tax Services, we make tax preparation clear and easy to understand.</p>
       </div>
-    </section>
 
-    <!-- Services -->
-    <section id="services">
-      <div class="container">
-        <div class="section-header">
-          <h2>Tax Services</h2>
-          <p>Designed to make tax season simple, clear, and affordable.</p>
-        </div>
-
-        <div class="grid grid-3">
-          <div class="card">
-            <span class="chip">Individuals & Families</span>
-            <h3>Personal Tax Preparation</h3>
-            <p>
-              Federal and state income tax returns for W-2 earners, retirees, single filers, and families.
-              We look for every credit and deduction you qualify for.
-            </p>
-          </div>
-
-          <div class="card">
-            <span class="chip">Self-Employed</span>
-            <h3>Small Business & Side Hustles</h3>
-            <p>
-              Tax prep for freelancers, contractors, and small business owners.
-              We help you organize income and expenses so you can file confidently.
-            </p>
-          </div>
-
-          <div class="card">
-            <span class="chip">Virtual Service</span>
-            <h3>Remote & Drop-Off Tax Prep</h3>
-            <p>
-              Upload your documents securely or drop them off.
-              We prepare your return, review it with you, and file electronically.
-            </p>
-          </div>
-
-          <div class="card">
-            <span class="chip">IRS Letters</span>
-            <h3>Tax Notice Support</h3>
-            <p>
-              Received a letter from the IRS or state?
-              We review the notice with you and help you understand your options and next steps.
-            </p>
-          </div>
-
-          <div class="card">
-            <span class="chip">Planning</span>
-            <h3>Year-Round Tax Guidance</h3>
-            <p>
-              Not just once a year.
-              We help you make smart decisions during the year to avoid surprises at tax time.
-            </p>
-          </div>
-
-          <div class="card">
-            <span class="chip">Referrals</span>
-            <h3>Family & Friends</h3>
-            <p>
-              Love your experience?
-              Ask about our referral appreciation when you send family, coworkers, and friends our way.
-            </p>
-          </div>
-        </div>
+      <div class="card">
+        <h3>Why Clients Choose Us</h3>
+        <ul class="list-check">
+          <li>Clear explanations without jargon</li>
+          <li>Flexible scheduling</li>
+          <li>Secure document handling</li>
+          <li>Year-round support</li>
+        </ul>
       </div>
-    </section>
-
-    <!-- About / Why Us -->
-    <section id="about">
-      <div class="container two-col">
-        <div>
-          <div class="section-header" style="text-align:left;margin-bottom:1rem;">
-            <h2>About 3:16 Premier Tax Services</h2>
-            <p>
-              Professional. Personable. Principled.
-            </p>
-          </div>
-          <p style="font-size:0.95rem;color:var(--muted);margin-bottom:0.8rem;">
-            At <strong>3:16 Premier Tax Services</strong>, we believe tax preparation should be clear,
-            respectful, and free from pressure or confusion. We take time to explain what we’re doing,
-            why it matters, and how your choices impact your refund or balance due.
-          </p>
-          <p style="font-size:0.95rem;color:var(--muted);">
-            Whether you’re an employee, a retiree, or running a business or side hustle,
-            we’re here to help you file accurately and confidently—with service grounded in integrity and care.
-          </p>
-        </div>
-
-        <div>
-          <div class="card">
-            <h3>Why clients choose us</h3>
-            <ul class="list-check">
-              <li>
-                <span class="icon">✓</span>
-                <span>We explain your return in everyday language—no jargon or rushing.</span>
-              </li>
-              <li>
-                <span class="icon">✓</span>
-                <span>Convenient scheduling options, including virtual appointments.</span>
-              </li>
-              <li>
-                <span class="icon">✓</span>
-                <span>Secure handling of your personal information and documents.</span>
-              </li>
-              <li>
-                <span class="icon">✓</span>
-                <span>Support that continues beyond tax season, not just one day a year.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Process -->
-    <section id="process">
-      <div class="container">
-        <div class="section-header">
-          <h2>How It Works</h2>
-          <p>Four simple steps from hello to filed.</p>
-        </div>
-
-        <div class="steps">
-          <div class="step">
-            <div class="step-number">1</div>
-            <h3>Schedule your appointment</h3>
-            <p>
-              Call, text, or submit the form below to choose an in-person or virtual appointment time that works for you.
-            </p>
-          </div>
-
-          <div class="step">
-            <div class="step-number">2</div>
-            <h3>Share your documents</h3>
-            <p>
-              Bring or upload your W-2s, 1099s, prior-year return, and any other tax forms.
-              We’ll let you know exactly what’s needed.
-            </p>
-          </div>
-
-          <div class="step">
-            <div class="step-number">3</div>
-            <h3>Review your return</h3>
-            <p>
-              We prepare your return and walk you through it line by line.
-              You’ll understand your refund or balance before anything is filed.
-            </p>
-          </div>
-
-          <div class="step">
-            <div class="step-number">4</div>
-            <h3>We file & support you</h3>
-            <p>
-              We e-file your return and provide copies for your records.
-              If questions or letters arise later, you can reach back out for support.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section id="testimonials">
-      <div class="container">
-        <div class="section-header">
-          <h2>What Clients Are Saying</h2>
-          <p>Add your real client stories here as you grow.</p>
-        </div>
-        <div class="grid grid-3">
-          <div class="card">
-            <p class="quote">
-              "They took the time to explain everything and made filing my taxes the easiest it’s ever been."
-            </p>
-            <p class="quote-name">— Client Name, Individual Filer</p>
-          </div>
-          <div class="card">
-            <p class="quote">
-              "As a small business owner, I finally feel confident that my taxes are done right and on time."
-            </p>
-            <p class="quote-name">— Client Name, Small Business</p>
-          </div>
-          <div class="card">
-            <p class="quote">
-              "The virtual process was smooth and convenient. I didn’t have to take off work to get it done."
-            </p>
-            <p class="quote-name">— Client Name, Remote Client</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq">
-      <div class="container">
-        <div class="section-header">
-          <h2>Frequently Asked Questions</h2>
-          <p>Still wondering how it works? Start here.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>Do you offer virtual tax preparation?</h3>
-          <p>
-            Yes. You can upload your documents securely and meet with us by phone or video.
-            We’ll review your return together before filing.
-          </p>
-        </div>
-
-        <div class="faq-item">
-          <h3>How much do your services cost?</h3>
-          <p>
-            Pricing depends on the complexity of your return.
-            We’ll provide a clear estimate up front so there are no surprises.
-          </p>
-        </div>
-
-        <div class="faq-item">
-          <h3>What do I need to bring to my appointment?</h3>
-          <p>
-            Typical documents include W-2s, 1099s, tax forms for interest, retirement, or investments,
-            and your prior-year return. We’ll send you a checklist when you schedule.
-          </p>
-        </div>
-
-        <div class="faq-item">
-          <h3>Can you help if I receive a letter from the IRS?</h3>
-          <p>
-            Yes. Bring or upload the notice and we’ll review it with you to help you understand what it means
-            and what options you may have.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-      <div class="container">
-        <div class="section-header">
-          <h2>Ready to Get Started?</h2>
-          <p>Use the form below to request an appointment, or reach out directly.</p>
-        </div>
-
-        <div class="contact-grid">
-          <div>
-            <form>
-              <div>
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" placeholder="Your full name" required />
-              </div>
-
-              <div>
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" placeholder="you@example.com" required />
-              </div>
-
-              <div>
-                <label for="phone">Phone</label>
-                <input id="phone" name="phone" type="tel" placeholder="Your phone number" />
-              </div>
-
-              <div>
-                <label for="message">How can we help?</label>
-                <textarea id="message" name="message" placeholder="Tell us about your tax situation or preferred appointment time."></textarea>
-              </div>
-
-              <button type="submit" class="btn-primary">
-                Submit Request
-              </button>
-              <p style="font-size:0.8rem;color:var(--muted);margin-top:0.4rem;">
-                This form is for demonstration only. Connect it to your email or form service to receive submissions.
-              </p>
-            </form>
-          </div>
-
-          <div class="contact-info">
-            <h3>Contact Information</h3>
-            <p>
-              <strong>Phone:</strong> YOUR PHONE NUMBER<br />
-              <strong>Email:</strong> YOUR EMAIL ADDRESS<br />
-              <strong>Location:</strong> YOUR CITY & STATE (In-person & virtual appointments)
-            </p>
-            <p style="margin-top:0.7rem;">
-              <strong>Hours (Tax Season):</strong><br />
-              Mon–Fri: 9:00 a.m. – 7:00 p.m.<br />
-              Sat: 10:00 a.m. – 3:00 p.m.<br />
-              Sun & other times by appointment.
-            </p>
-            <p style="margin-top:0.7rem;">
-              Prefer to text? Send a quick message with “TAX APPOINTMENT” and we’ll reply with options.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container footer-inner">
-      <span>
-        © <span id="year"></span> 3:16 Premier Tax Services. All rights reserved.
-      </span>
-      <span>
-        This website is for informational purposes only and does not constitute legal or financial advice.
-      </span>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    // Set current year in footer
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2>Contact Us</h2>
+        <p>We’re here to help with your tax needs.</p>
+      </div>
+
+      <div class="contact-grid">
+        <form>
+          <label>Name</label>
+          <input type="text" placeholder="Your name">
+
+          <label>Email</label>
+          <input type="email" placeholder="you@example.com">
+
+          <label>Message</label>
+          <textarea placeholder="How can we help?"></textarea>
+
+          <button class="btn-primary">Submit</button>
+        </form>
+
+        <div>
+          <p><strong>Email:</strong> YOUR EMAIL</p>
+          <p><strong>Phone:</strong> YOUR PHONE</p>
+          <p>We respond within 24 hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> 3:16 Premier Tax Services</span>
+    <span>All rights reserved.</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
